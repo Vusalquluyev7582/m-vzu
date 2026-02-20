@@ -792,18 +792,23 @@ footer {
     }
 
     p,
-    .section-description,
-    .info-text {
-        p {
-            text-align: left;
-            /* Sözlərin arası açılmasın */
-            hyphens: auto;
-            /* Uzun sözləri avtomatik seliqəli bölsün */
-            line-height: 1.6;
-            /* Sətir arasını bir az genişləndir ki, göz yorulmasın */
-            word-break: break-word;
-            /* Söz çox uzundursa, sətirə sığışdırsın */
-        }
+    .info-text,
+    .section-description {
+        /* 1. Bütün məcburi düzləndirmələri və boşluqları sıfırlayırıq */
+        text-align: left !important;
+        letter-spacing: normal !important;
+        word-spacing: 0 !important;
+
+        /* 2. Sözlərin sətir sonunda pərakəndə qalmaması üçün seliqəli keçid */
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+
+        /* 3. Oxunulabilirliyi artırmaq üçün sətir hündürlüyü */
+        line-height: 1.5;
+
+        /* 4. Əgər kənarlara çox yapışırsa, bir az boşluq verək */
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .go-upstairs {
