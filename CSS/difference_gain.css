@@ -794,12 +794,16 @@ footer {
     p,
     .section-description,
     .info-text {
-        text-align: left !important;
-        /* Mətni sola çəkir */
-        word-spacing: normal;
-        /* Söz arası boşluğu standart edir */
-        hyphens: auto;
-        /* Lazım gələrsə sözləri sətirdən-sətrə keçirir */
+        p {
+            text-align: left;
+            /* Sözlərin arası açılmasın */
+            hyphens: auto;
+            /* Uzun sözləri avtomatik seliqəli bölsün */
+            line-height: 1.6;
+            /* Sətir arasını bir az genişləndir ki, göz yorulmasın */
+            word-break: break-word;
+            /* Söz çox uzundursa, sətirə sığışdırsın */
+        }
     }
 
     .go-upstairs {
