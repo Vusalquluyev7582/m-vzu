@@ -791,6 +791,17 @@ footer {
         font-size: 1em;
     }
 
+    p,
+    .section-description,
+    .info-text {
+        text-align: left !important;
+        /* Mətni sola çəkir */
+        word-spacing: normal;
+        /* Söz arası boşluğu standart edir */
+        hyphens: auto;
+        /* Lazım gələrsə sözləri sətirdən-sətrə keçirir */
+    }
+
     .go-upstairs {
         width: 120px;
         height: 48px;
